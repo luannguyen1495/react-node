@@ -1,9 +1,11 @@
 import * as http from '../https/http';
-const urlApi = 'http://localhost:8080/api/danh_muc';
+import jwtInterceptor from '../https/private'
+const urlApi = 'http://localhost:3000/api/danh_muc';
 export const getAll = async()=>{
     try {
-        const res = await http.get(urlApi);
        
+        const res = await jwtInterceptor.get(urlApi);
+        
         return res;
         
     } catch (error) {

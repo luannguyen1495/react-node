@@ -1,5 +1,5 @@
 import * as http from '../https/http';
-const urlApi = 'http://localhost:8080/api/danh_muc';
+const urlApi = 'http://localhost:4000/api/login';
 export const login = async(data)=>{
     try {
         const res = await http.post(urlApi,data);

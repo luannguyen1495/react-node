@@ -7,9 +7,9 @@ function Admin(){
     useEffect(()=>{
         const getApi = async ()=>{
             const data = await productService.getAll();
-            
+            console.log(data)
             setListProduct(data);
-            console.log(data);
+            
         }
         getApi();
       
